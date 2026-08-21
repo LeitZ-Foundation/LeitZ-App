@@ -1,4 +1,4 @@
-package com.leitz.app.data.local.model
+package com.leitz.app.data.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -11,7 +11,7 @@ data class Conversation(
     val lastMessage: String = "",
     val lastMessageTimestamp: Long = 0L,
     val isGroup: Boolean = false,
-    val participantIds: String = "", // comma-separated list of user IDs
+    val participantIds: String = "",
     val avatarUrl: String? = null,
     val unreadCount: Int = 0
 )
