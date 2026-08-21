@@ -1,0 +1,156 @@
+leitz/
+├── .github/
+│   └── workflows/
+│       ├── android.yml
+│       ├── ios.yml
+│       └── server.yml
+│
+├── android/
+│   ├── app/
+│   │   ├── src/
+│   │   │   ├── main/
+│   │   │   │   ├── java/com/leitz/app/
+│   │   │   │   │   ├── MainActivity.kt
+│   │   │   │   │   ├── data/
+│   │   │   │   │   │   ├── local/
+│   │   │   │   │   │   │   ├── AppDatabase.kt
+│   │   │   │   │   │   │   ├── MessageDao.kt
+│   │   │   │   │   │   │   └── ConversationDao.kt
+│   │   │   │   │   │   ├── model/
+│   │   │   │   │   │   │   ├── Message.kt
+│   │   │   │   │   │   │   ├── Conversation.kt
+│   │   │   │   │   │   │   └── User.kt
+│   │   │   │   │   │   └── repository/
+│   │   │   │   │   │       └── ChatRepository.kt
+│   │   │   │   │   ├── network/
+│   │   │   │   │   │   ├── WebSocketClient.kt
+│   │   │   │   │   │   ├── SignalClient.kt
+│   │   │   │   │   │   └── StunTurnConfig.kt
+│   │   │   │   │   ├── p2p/
+│   │   │   │   │   │   ├── WebRTCManager.kt
+│   │   │   │   │   │   ├── PeerConnectionManager.kt
+│   │   │   │   │   │   └── IceCandidateHandler.kt
+│   │   │   │   │   ├── crypto/
+│   │   │   │   │   │   ├── SignalProtocolManager.kt
+│   │   │   │   │   │   └── KeyStoreHelper.kt
+│   │   │   │   │   ├── ui/
+│   │   │   │   │   │   ├── theme/
+│   │   │   │   │   │   │   ├── Color.kt
+│   │   │   │   │   │   │   ├── Theme.kt
+│   │   │   │   │   │   │   └── Type.kt
+│   │   │   │   │   │   ├── screens/
+│   │   │   │   │   │   │   ├── LoginScreen.kt
+│   │   │   │   │   │   │   ├── ChatListScreen.kt
+│   │   │   │   │   │   │   ├── ChatScreen.kt
+│   │   │   │   │   │   │   ├── CallScreen.kt
+│   │   │   │   │   │   │   └── SettingsScreen.kt
+│   │   │   │   │   │   └── components/
+│   │   │   │   │   │       ├── MessageBubble.kt
+│   │   │   │   │   │       ├── UserAvatar.kt
+│   │   │   │   │   │       └── TypingIndicator.kt
+│   │   │   │   │   └── util/
+│   │   │   │   │       ├── Constants.kt
+│   │   │   │   │       └── Extensions.kt
+│   │   │   │   ├── res/
+│   │   │   │   │   ├── layout/
+│   │   │   │   │   ├── values/
+│   │   │   │   │   │   ├── strings.xml
+│   │   │   │   │   │   ├── colors.xml
+│   │   │   │   │   │   └── themes.xml
+│   │   │   │   │   └── drawable/
+│   │   │   │   └── AndroidManifest.xml
+│   │   │   └── build.gradle
+│   │   └── build.gradle
+│   ├── gradle/
+│   │   └── wrapper/
+│   │       ├── gradle-wrapper.properties
+│   │       └── gradle-wrapper.jar
+│   ├── build.gradle
+│   ├── settings.gradle
+│   └── gradle.properties
+│
+├── ios/
+│   ├── LeitX/
+│   │   ├── App/
+│   │   │   ├── LeitXApp.swift
+│   │   │   ├── ContentView.swift
+│   │   │   └── Info.plist
+│   │   ├── Models/
+│   │   │   ├── Message.swift
+│   │   │   ├── Conversation.swift
+│   │   │   └── User.swift
+│   │   ├── Networking/
+│   │   │   ├── WebSocketClient.swift
+│   │   │   ├── SignalClient.swift
+│   │   │   └── StunTurnConfig.swift
+│   │   ├── P2P/
+│   │   │   ├── WebRTCManager.swift
+│   │   │   ├── PeerConnectionManager.swift
+│   │   │   └── IceCandidateHandler.swift
+│   │   ├── Crypto/
+│   │   │   ├── SignalProtocolManager.swift
+│   │   │   └── KeychainHelper.swift
+│   │   ├── UI/
+│   │   │   ├── Screens/
+│   │   │   │   ├── LoginView.swift
+│   │   │   │   ├── ChatListView.swift
+│   │   │   │   ├── ChatView.swift
+│   │   │   │   ├── CallView.swift
+│   │   │   │   └── SettingsView.swift
+│   │   │   ├── Components/
+│   │   │   │   ├── MessageBubble.swift
+│   │   │   │   ├── UserAvatar.swift
+│   │   │   │   └── TypingIndicator.swift
+│   │   │   └── Theme/
+│   │   │       ├── Colors.swift
+│   │   │       └── LeitXTheme.swift
+│   │   └── Utilities/
+│   │       ├── Constants.swift
+│   │       └── Extensions.swift
+│   └── LeitX.xcodeproj/
+│       └── project.pbxproj
+│
+├── server/
+│   ├── src/
+│   │   ├── index.ts
+│   │   ├── config.ts
+│   │   ├── websocket/
+│   │   │   ├── WebSocketServer.ts
+│   │   │   ├── SignalHandler.ts
+│   │   │   └── PresenceManager.ts
+│   │   ├── auth/
+│   │   │   ├── AuthController.ts
+│   │   │   ├── JwtMiddleware.ts
+│   │   │   └── UserStore.ts
+│   │   ├── database/
+│   │   │   ├── db.ts
+│   │   │   ├── models/
+│   │   │   │   ├── User.ts
+│   │   │   │   └── Session.ts
+│   │   │   └── migrations/
+│   │   │       └── 001_init.sql
+│   │   ├── turn/
+│   │   │   └── TurnConfig.ts
+│   │   └── utils/
+│   │       ├── Logger.ts
+│   │       └── Constants.ts
+│   ├── package.json
+│   ├── tsconfig.json
+│   ├── .env.example
+│   └── README.md
+│
+├── protocol/
+│   ├── signal.proto
+│   ├── messages.proto
+│   └── sdp.proto
+│
+├── docs/
+│   ├── architecture.md
+│   ├── security.md
+│   ├── api.md
+│   ├── p2p.md
+│   └── contributing.md
+│
+├── .gitignore
+├── LICENSE
+└── README.md
