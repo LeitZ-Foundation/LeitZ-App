@@ -1,4 +1,4 @@
-package com.leitz.app.data.local.model
+package com.leitz.app.data.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -10,9 +10,9 @@ data class Message(
     val conversationId: String,
     val senderId: String,
     val content: String,
-    val type: String, // "text", "image", "video", "file", "audio"
+    val type: String,
     val timestamp: Long,
-    val status: String, // "sending", "sent", "delivered", "read"
+    val status: String,
     val mediaUrl: String? = null,
     val mediaSize: Long? = null,
     val mediaMimeType: String? = null,
